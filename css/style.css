@@ -13,6 +13,15 @@ TECHS: HTML, CSS, JS
   margin: 0;
   box-sizing: border-box;
 }
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* root configs */
 
 :root {
   font-size: 62.5%;
@@ -23,7 +32,11 @@ TECHS: HTML, CSS, JS
   --gradient: #6441a5, #2a0845;
 
   --font-family: 'Sora', sans-serif;
+
+  --background-image: url('../assets/images/bg-polym-grid.jpg');
 }
+
+/* stylesheet */
 
 html {
   height: 100vh;
@@ -31,7 +44,32 @@ html {
 
 body {
   height: 100%;
-  background-image: url('../assets/images/bg-polym-grid.jpg');
+  background-image: var(--background-image);
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: var(--font-family);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 54rem;
+  height: 100%;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+  color: var(--primary-font-color);
+
+  /* background-color: red; */
+}
+
+header {
+  background-color: var(--primary-color);
+}
+
+footer {
+  background-color: var(--primary-color);
 }
