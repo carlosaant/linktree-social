@@ -25,4 +25,13 @@ TECHS: HTML, CSS, JS
   --font-family: 'Sora', sans-serif;
 }
 
-/* styles */
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  background-image: url('../assets/images/bg-polym-grid.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
