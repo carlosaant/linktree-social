@@ -29,7 +29,8 @@ a:active {
   --secondary-color: #601146;
   --primary-font-color: #ffffff;
   --secondary-font-color: #919193;
-  --gradient: #6441a5, #2a0845;
+  --gradient-primary: #6441a5;
+  --gradient-secondary: #2a0845;
 
   --font-family: 'Sora', sans-serif;
 
@@ -68,6 +69,34 @@ body {
 
 header {
   background-color: var(--primary-color);
+  padding-block: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.profile-picture {
+  width: 12rem;
+  height: 12rem;
+  background: linear-gradient(
+    to right,
+    var(--gradient-primary),
+    var(--gradient-secondary)
+  );
+  border-radius: 50%;
+  border: 0.5rem solid transparent;
+  border-image: linear-gradient(
+      to right,
+      var(--gradient-primary),
+      var(--gradient-secondary)
+    )
+    1;
 }
 
 footer {
