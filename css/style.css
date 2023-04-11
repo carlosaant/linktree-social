@@ -1,0 +1,14 @@
+/* reset styles */
+/* ====== version 1.0 =========== */
+/*
+AUTHOR: ANTONIO CARLOS
+TECHS: HTML, CSS, JS 
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* styles */
