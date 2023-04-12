@@ -66,7 +66,7 @@ body {
   background-size: cover;
   font-family: var(--font-family);
 
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   overflow: overlay;
 }
 
@@ -189,7 +189,6 @@ header {
 }
 
 .list-item {
-  font-size: 1.6rem;
   height: 5rem;
   border-radius: 2.5rem; /* metade do tamanho do height */
   border: 0.1rem solid transparent;
@@ -207,8 +206,6 @@ header {
   align-items: center;
   flex-grow: 1;
   padding-inline: 3rem;
-
-  font-size: 1.4rem;
   letter-spacing: 0.3rem;
 }
 
@@ -251,4 +248,15 @@ footer {
 .footer-link:hover {
   background-color: var(--gradient-secondary);
   border: 0.1rem solid var(--gradient-secondary);
+}
+
+/* media */
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.6rem;
+  }
+  .profile-description {
+    padding-inline: calc(var(--padding-inline-description) * 2);
+  }
 }
