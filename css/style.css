@@ -49,6 +49,7 @@ html {
 
 body {
   height: 100%;
+  background-color: var(--gradient-secondary);
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-size: cover;
