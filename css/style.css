@@ -79,7 +79,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
 
   color: var(--primary-font-color);
 
@@ -177,7 +176,10 @@ header {
   display: flex;
   flex-direction: column;
   padding-inline: calc(var(--padding-inline-description) - 2rem);
+  padding-block: var(--padding-inline-description);
   gap: 1rem;
+
+  background-color: var(--gradient-primary);
 }
 
 .item-bg {
@@ -194,8 +196,7 @@ header {
   transition: all 0.3s;
 }
 .list-item:hover {
-  background-color: var(--gradient-primary);
-  border: 0.1rem solid var(--gradient-secondary);
+  background-color: var(--primary-color);
 }
 
 .list-link {
@@ -233,7 +234,7 @@ footer {
   gap: 5rem;
 }
 
-footer a {
+.footer-link {
   width: calc(var(--svg-size-icon) * 2);
   height: calc(var(--svg-size-icon) * 2);
   border-radius: 50%;
@@ -241,4 +242,10 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
+}
+
+.footer-link:hover {
+  background-color: var(--gradient-secondary);
+  border: 0.1rem solid var(--gradient-secondary);
 }
