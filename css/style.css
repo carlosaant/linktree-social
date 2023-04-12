@@ -37,7 +37,8 @@ a:active {
   --background-image: url('../assets/images/bg-polym-grid.jpg');
 
   --perfil-image-dimension: 12rem;
-  --padding-top: 1.5rem;
+  --padding-top: 2.5rem;
+  --padding-bottom: 2rem;
 }
 
 /* stylesheet */
@@ -90,6 +91,7 @@ header {
   justify-content: center;
 
   padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
 }
 .image-wrapper::after {
   content: '';
@@ -98,15 +100,16 @@ header {
 
   width: calc(var(--perfil-image-dimension) + 1.5rem);
   height: calc(var(--perfil-image-dimension) + 1.5rem);
-  top: calc(var(--padding-top) - 1rem);
+  top: calc(var(--padding-top) - 1.3rem);
 
   border-radius: 50%;
-  border: double 0.2rem transparent;
-  background-image: linear-gradient(
-    to right,
-    var(--gradient-primary),
-    var(--gradient-secondary)
-  );
+  border: double 0.5rem transparent;
+  background-image: linear-gradient(var(--primary-color), var(--primary-color)),
+    linear-gradient(
+      to right,
+      var(--gradient-primary),
+      var(--gradient-secondary)
+    );
   background-origin: border-box;
   background-clip: content-box, border-box;
 
