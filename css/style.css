@@ -35,6 +35,9 @@ a:active {
   --font-family: 'Sora', sans-serif;
 
   --background-image: url('../assets/images/bg-polym-grid.jpg');
+
+  --perfil-image-dimension: 12rem;
+  --padding-top: 1.5rem;
 }
 
 /* stylesheet */
@@ -69,7 +72,6 @@ body {
 
 header {
   background-color: var(--primary-color);
-  padding-block: 1rem;
 
   display: flex;
   justify-content: center;
@@ -81,22 +83,57 @@ header {
   border-top-right-radius: 1rem;
 }
 
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  padding-top: var(--padding-top);
+}
+.image-wrapper::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+
+  width: calc(var(--perfil-image-dimension) + 1.5rem);
+  height: calc(var(--perfil-image-dimension) + 1.5rem);
+  top: calc(var(--padding-top) - 1rem);
+
+  border-radius: 50%;
+  border: double 0.2rem transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--gradient-primary),
+    var(--gradient-secondary)
+  );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+  animation: spin-element 3s infinite linear;
+}
+
+@keyframes spin-element {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .profile-picture {
-  width: 12rem;
-  height: 12rem;
+  width: var(--perfil-image-dimension);
+  height: var(--perfil-image-dimension);
+  display: block;
   background: linear-gradient(
     to right,
     var(--gradient-primary),
     var(--gradient-secondary)
   );
   border-radius: 50%;
-  border: 0.5rem solid transparent;
-  border-image: linear-gradient(
-      to right,
-      var(--gradient-primary),
-      var(--gradient-secondary)
-    )
-    1;
+
+  z-index: 2;
 }
 
 footer {
