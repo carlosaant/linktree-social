@@ -21,6 +21,11 @@ a:active {
   color: inherit;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
 /* root configs */
 
 :root {
@@ -43,6 +48,8 @@ a:active {
 
   --font-username-h1: 2.6rem;
   --font-description-p: 1.2rem;
+
+  --svg-size-icon: 2.4rem;
 }
 
 /* stylesheet */
@@ -88,8 +95,8 @@ header {
   flex-direction: column;
   gap: 0.5rem;
 
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
 
   padding-bottom: var(--padding-bottom);
 }
@@ -162,6 +169,53 @@ header {
   font-size: var(--font-description-p);
 
   line-height: 120%;
+}
+
+/* ITEMS */
+
+.list-items {
+  display: flex;
+  flex-direction: column;
+  padding-inline: calc(var(--padding-inline-description) - 2rem);
+  gap: 1rem;
+}
+
+.item-bg {
+  background-color: var(--gradient-secondary);
+}
+
+.list-item {
+  font-size: 1.6rem;
+  height: 5rem;
+  border-radius: 2.5rem; /* metade do tamanho do height */
+  border: 0.1rem solid transparent;
+
+  display: flex;
+  transition: all 0.3s;
+}
+.list-item:hover {
+  background-color: var(--gradient-primary);
+  border: 0.1rem solid var(--gradient-secondary);
+}
+
+.list-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  padding-inline: 3rem;
+
+  font-size: 1.4rem;
+  letter-spacing: 0.3rem;
+}
+
+.svg-modifier {
+  width: var(--svg-size-icon);
+  height: var(--svg-size-icon);
+}
+.svg-modifier path {
+  fill: var(--primary-font-color);
+  stroke: transparent;
 }
 
 footer {
