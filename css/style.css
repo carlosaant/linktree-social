@@ -47,6 +47,7 @@ ol {
   --padding-inline-description: 3rem;
 
   --font-username-h1: 2.6rem;
+  --font-size-padrao: 1.2rem;
   --font-description-p: 1.2rem;
 
   --svg-size-icon: 2.4rem;
@@ -67,7 +68,7 @@ body {
   background-size: cover;
   font-family: var(--font-family);
 
-  font-size: 1.2rem;
+  font-size: var(--font-size-padrao);
   overflow: overlay;
 }
 
@@ -256,7 +257,7 @@ footer {
 
 @media (min-width: 768px) {
   body {
-    font-size: 1.6rem;
+    font-size: calc(var(--font-size-padrao) * 1.4);
   }
   .profile-description {
     padding-inline: calc(var(--padding-inline-description) * 2);
